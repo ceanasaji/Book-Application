@@ -1,0 +1,19 @@
+h1
+{
+    color:black;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 56px;
+   margin-top: 20px;
+}
+p
+{
+    color:black;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+padding-top: 14px;
+
+}

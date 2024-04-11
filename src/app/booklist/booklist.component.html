@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h1 align="center">Books Stock </h1>
+    <div align='right'>
+        <a class="btn btn-primary" [routerLink]="['/AddBook']">Add New Book</a>
+    </div>
+    <p class="bg-success text-white p-3" *ngIf="bdelstat">Record Deleted Successfully</p>
+    <table class="table table-bordered mt-5">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>Name</th>
+                <th>Writer</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let b of books">
+                <td>{{b.id}}</td>
+                <td>{{b.bname}}</td>
+                <td>{{b.writer}}</td>
+                <td>{{b.price}}</td>
+                <td><button class="btn btn-danger" (click)="deleteBook(b.id)">Delete</button> </td>
+                <td>
+                    <button class="btn btn-info" [routerLink]="['/EditBook/', b.id,'Edit']">Edit</button>
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
